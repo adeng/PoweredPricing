@@ -14,10 +14,16 @@ import { MatCardModule } from '@angular/material/card';
 
 // Import this page's components
 import { SummaryPageComponentModule } from './pages/project/summary-page/summary-page.module';
+import { ScopingPageComponent } from './pages/project/scoping-page/scoping-page.component';
+import { ResourcingPageComponent } from './pages/project/resourcing-page/resourcing-page.component';
+import { PricingPageComponent } from './pages/project/pricing-page/pricing-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScopingPageComponent,
+    ResourcingPageComponent,
+    PricingPageComponent
   ],
   imports: [
     BrowserModule,

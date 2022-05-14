@@ -1,20 +1,48 @@
 .header {
     height: 175px;
     background-color: #303f9f;
+    padding-top: 50px;
 
     h1 {
         margin: 0 0 0 20px;
         color: white;
         font-weight: 400;
-        line-height: 150px;
+        display: inline-block;
+    }
+
+    button {
+        position: absolute;
+        right: 15px;
+        border-radius: 25px;
+        border: 0px solid;
+        height: 45px;
+        width: 45px;
+        background-color: #2196F3;
+        color: white;
+
+        p {
+            font-size: 20px;
+            margin: 0;
+        }
     }
 }
 
 .container {
     height: calc(100% - 150px);
     width: 100%;
-    background-color: #CFD8DC;
+    background-color: #cfd8dc;
     position: absolute;
     bottom: 0;
     border-radius: 15px 15px 0 0;
+
+    .button-segment-bar {
+        padding: 25px;
+
+        button {
+            width: 100%;
+            margin-right: 20px;
+            background-color: #448AFF;
+            color: white;
+        }
+    }
 }

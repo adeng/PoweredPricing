@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="header">
+	<img src="assets/kpmg-logo.png" />
 	<h1>Powered Project Modeler</h1>
 
 	<button mat-mini-fab>
@@ -8,7 +9,7 @@
 	</button>
 </div>
 
-<div class="container">
+<div class="container mat-card">
 	<div class="button-segment-bar">
 		<mat-grid-list cols="6" rowHeight="4:1">
 			<mat-grid-tile></mat-grid-tile>
@@ -27,6 +28,8 @@
 			<mat-grid-tile></mat-grid-tile>
 		</mat-grid-list>
 	</div>
-</div>
 
-<router-outlet></router-outlet>
+	<div class="main mat-card">
+		<router-outlet></router-outlet>		
+	</div>
+</div>

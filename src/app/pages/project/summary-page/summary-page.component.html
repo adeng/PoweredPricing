@@ -1,0 +1,69 @@
+<div class="container">
+	<form>
+		<div class="header">
+			<mat-form-field>
+				<mat-label>Project Name</mat-label>
+				<input matInput #projectName placeholder="Contoso Inc Cloud Financials Security" maxlength="40" required>
+				<mat-hint align="end">{{projectName.value?.length || 0}}/40</mat-hint>
+			</mat-form-field>
+		</div>
+
+		<div class="systems">
+			<h2>Systems</h2>
+			<mat-accordion>
+				<mat-expansion-panel>
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							Oracle Cloud Applications
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<mat-checkbox>Financials</mat-checkbox>
+					<mat-checkbox>Enterprise Performance Management</mat-checkbox>
+					<mat-checkbox>Risk Management</mat-checkbox>
+				</mat-expansion-panel>
+				
+				<mat-expansion-panel>
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							Workday
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<mat-checkbox>Financial Management</mat-checkbox>
+					<mat-checkbox>Human Capital Management</mat-checkbox>
+				</mat-expansion-panel>
+				
+				<mat-expansion-panel>
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							Salesforce
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<mat-checkbox>Sales Cloud</mat-checkbox>
+					<mat-checkbox>Services Cloud</mat-checkbox>
+					<mat-checkbox>Marketing Cloud</mat-checkbox>
+				</mat-expansion-panel>
+				
+				<mat-expansion-panel>
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							Guidewire
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<mat-checkbox>Policy Center</mat-checkbox>
+					<mat-checkbox>Claims Center</mat-checkbox>
+				</mat-expansion-panel>
+			</mat-accordion>
+		</div>
+
+		<div class="considerations">
+			<h2>Special Pricing Considerations</h2>
+			<mat-checkbox>Phase 0 only</mat-checkbox>
+			<mat-checkbox>International Deployment</mat-checkbox>
+			<mat-checkbox>Business Integration Only</mat-checkbox>
+			<mat-checkbox>No KGS</mat-checkbox>
+			<mat-checkbox>Client Bankruptcy</mat-checkbox>
+		</div>
+	</form>
+	
+	
+</div>

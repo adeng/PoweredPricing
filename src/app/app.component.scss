@@ -3,9 +3,15 @@
     background-color: #303f9f;
     padding-top: 50px;
 
+    img {
+        width: 120px;
+        margin-left: 25px;
+    }
+
     h1 {
         margin: 0 0 0 20px;
         color: white;
+        transform: translateY(-5px);
         font-weight: 400;
         display: inline-block;
     }
@@ -44,5 +50,14 @@
             background-color: #448AFF;
             color: white;
         }
+    }
+
+    .main {
+        background-color: #EEEEEE;
+        /* Centering this div */
+        margin-left: 40px;
+        width: calc(100% - 40px - 40px);
+        height: calc(100% - 100px - 40px);
+        border-radius: 15px;
     }
 }

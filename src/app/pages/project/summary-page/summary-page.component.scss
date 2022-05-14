@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+
+    // Global page settings
+    h2 {
+        font-weight: 400;
+        font-size: x-large;
+    }
+    
+    mat-checkbox {
+        margin-right: 20px;
+    }
+
+    // Section specific settings
+    .header {
+        width: 50%;
+
+        mat-form-field {
+            width: 100%;
+        }
+    }
+
+    .systems {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .considerations {
+        margin-top: 20px;
+    }
+}

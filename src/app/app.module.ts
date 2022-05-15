@@ -12,18 +12,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 
+
 // Import this page's components
 import { SummaryPageComponentModule } from './pages/project/summary-page/summary-page.module';
-import { ScopingPageComponent } from './pages/project/scoping-page/scoping-page.component';
-import { ResourcingPageComponent } from './pages/project/resourcing-page/resourcing-page.component';
-import { PricingPageComponent } from './pages/project/pricing-page/pricing-page.component';
+import { ResourcingPageComponentModule } from './pages/project/resourcing-page/resourcing-page.module';
+import { ScopingPageComponentModule } from './pages/project/scoping-page/scoping-page.module';
+import { PricingPageComponentModule } from './pages/project/pricing-page/pricing-page.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScopingPageComponent,
-    ResourcingPageComponent,
-    PricingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +32,10 @@ import { PricingPageComponent } from './pages/project/pricing-page/pricing-page.
     MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
-    SummaryPageComponentModule
+    SummaryPageComponentModule,
+    ResourcingPageComponentModule,
+    ScopingPageComponentModule,
+    PricingPageComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,4 +10,4 @@ import { ScopingPageComponent } from "./scoping-page.component";
     ],
     declarations: [ScopingPageComponent]
 })
-export class ScopingPageComponentMdoule {}
+export class ScopingPageComponentModule {}

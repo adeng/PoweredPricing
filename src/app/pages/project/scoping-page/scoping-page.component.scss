@@ -8,6 +8,10 @@
         font-size: x-large;
     }
 
+    h3 {
+        font-weight: 400;
+    }
+
     // Section specific settings
     .header {
 
@@ -42,6 +46,27 @@
             width: 75% !important;
             height: 100% !important;
             padding: 0 !important;
+
+            mat-tab-group {
+                position: absolute;
+                top: 0;
+                height: 100%;
+
+                .tab-modifiers {
+                    mat-checkbox {
+                        display: block;
+                    }
+
+                    h3.override-header {
+                        margin-top: 50px;
+                        margin-bottom: 0px;
+                    }
+
+                    mat-slider {
+                        width: 70%;
+                    }
+                }
+            }
         }
     }
 }

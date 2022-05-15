@@ -1,3 +1,47 @@
 .container {
     padding: 20px;
+    height: calc(100% - 40px);
+
+    // Global page settings
+    h2 {
+        font-weight: 400;
+        font-size: x-large;
+    }
+
+    // Section specific settings
+    .header {
+
+    }
+
+    .content {
+        height: 100%;
+
+        mat-grid-list {
+            height: 100%;
+            padding: 0 !important;
+        }
+
+        .scope-list {
+            height: 100%;
+            padding-top: 0 !important;
+            background-color: white;
+            border-radius: 15px;
+            overflow: scroll;
+
+            .section {
+                position: absolute;
+                left: 30px;
+
+                mat-checkbox {
+                    display: block;
+                }
+            }
+        }
+
+        .scope-content {
+            width: 75% !important;
+            height: 100% !important;
+            padding: 0 !important;
+        }
+    }
 }

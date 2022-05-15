@@ -8,26 +8,38 @@
             <mat-grid-tile class="scope-list mat-card">
                 <div class="section">
                     <h2>Financials</h2>
-					<mat-checkbox>Record to Report</mat-checkbox>
-                    <mat-checkbox>Procure to Pay</mat-checkbox>
-                    <mat-checkbox>Order to Cash</mat-checkbox>
-                    <mat-checkbox>Plan to Perform</mat-checkbox>
-                    <mat-checkbox>Acquire to Retire</mat-checkbox>
+					<mat-checkbox (change)="setArea('Record to Report')">Record to Report</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Procure to Pay')">Procure to Pay</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Order to Cash')">Order to Cash</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Plan to Perform')">Plan to Perform</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Acquire to Retire')">Acquire to Retire</mat-checkbox>
                     <h2>Governance</h2>
-					<mat-checkbox>Project Management</mat-checkbox>
-                    <mat-checkbox>Change Management</mat-checkbox>
-                    <mat-checkbox>Security and Controls</mat-checkbox>
-                    <mat-checkbox>Tax</mat-checkbox>
+					<mat-checkbox (change)="setArea('Project Management')">Project Management</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Change Management')">Change Management</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Security and Controls')">Security and Controls</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Tax')">Tax</mat-checkbox>
                     <h2>Additional Options</h2>
-					<mat-checkbox>Innovation</mat-checkbox>
-                    <mat-checkbox>Investment</mat-checkbox>
-                    <mat-checkbox>Discounting</mat-checkbox>
-                    <mat-checkbox>Special Considerations</mat-checkbox>
+					<mat-checkbox (change)="setArea('Innovation')">Innovation</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Investment')">Investment</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Discounting')">Discounting</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Special Considerations')">Special Considerations</mat-checkbox>
                 </div>
             </mat-grid-tile>
             <mat-grid-tile class="scope-content" rowspan="3">
                 <mat-tab-group mat-align-tabs="center">
                     <mat-tab label="Overview">
+                        <div class="tab-overview">
+                            <h2>{{currentArea}}</h2>
+
+                            <h3>Phases in Scope</h3>
+                            <mat-checkbox checked="true">Discovery</mat-checkbox>
+                            <mat-checkbox checked="true">Vision</mat-checkbox>
+                            <mat-checkbox checked="true">Validate</mat-checkbox>
+                            
+                            <h3>Staffing Considerations</h3>
+                            <mat-checkbox>Using KGS</mat-checkbox>
+                            <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                        </div>
 
                     </mat-tab>
                     

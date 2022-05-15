@@ -53,6 +53,13 @@
                 height: 100%;
                 width: calc(100% - 40px);
 
+                .tab-overview {
+                    
+                    mat-checkbox {
+                        display: block;
+                    }
+                }
+
                 .tab-details {
                     padding: 20px;
 

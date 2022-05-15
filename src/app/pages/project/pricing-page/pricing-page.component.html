@@ -5,25 +5,30 @@
 	</div>
 
 	<div class="resourcing-table">
-		<!-- <table mat-table #table [dataSource]="RESOURCING_DATA" class="mat-card">
+		<table mat-table #table [dataSource]="PRICING_DATA" class="mat-card">
 		
 			<ng-container *ngFor="let column of columns" [matColumnDef]="column">
 				<th mat-header-cell *matHeaderCellDef>{{displayColumns[column]}}</th>
 
-				<td mat-cell *matCellDef="let resource" [ngSwitch]="column"> 
-					<mat-slide-toggle *ngSwitchCase="'active'" [(ngModel)]="!resource.active"></mat-slide-toggle>
-					<mat-form-field *ngSwitchCase="'override'">
-						<input matInput />
-					</mat-form-field>
-					<p *ngSwitchCase="'fte'">{{resource.active ? resource.fte : 0}}</p>
-					<p *ngSwitchCase="'estimated_hours'">{{resource.fte * HOURS_CONSTANT}}</p>
-					<p *ngSwitchCase="'allocation'">{{calculateAllocation(resource) | percent}}</p>
+				<td mat-cell *matCellDef="let resource" [ngSwitch]="column">
+					<p *ngSwitchCase="'fees'">{{resource[column] | currency}}</p> 
+					<p *ngSwitchCase="'margin'">{{resource[column] | percent}}</p>
+					<p *ngSwitchCase="'erp'">{{resource[column] | percent}}</p>
 					<p *ngSwitchDefault>{{resource[column]}}</p>
+				</td>
+
+				<td mat-footer-cell *matFooterCellDef [ngSwitch]="column">
+					<p *ngSwitchCase="'process'"><b>Total</b></p>
+					<p *ngSwitchCase="'fees'"><b>{{calculateTotalFees() | currency}}</b></p>
+					<p *ngSwitchCase="'margin'"><b>{{calculateAverageMetric("margin") | percent}}</b></p>
+					<p *ngSwitchCase="'erp'"><b>{{calculateAverageMetric("erp") | percent}}</b></p>
+					<p *ngSwitchCase="'rph'"><b>{{calculateAverageMetric("rph")}}</b></p>
 				</td>
 			</ng-container>
 
 			<tr mat-header-row *matHeaderRowDef="columns"></tr>
 			<tr mat-row *matRowDef="let row; columns: columns;"></tr>
-		</table> -->
+			<tr mat-footer-row *matFooterRowDef="columns"></tr>
+		</table>
 	</div>
 </div>

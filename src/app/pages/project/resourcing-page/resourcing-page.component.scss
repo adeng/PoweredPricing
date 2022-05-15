@@ -1,5 +1,6 @@
 .container {
     padding: 20px;
+    height: 100%;
     
     // Global page settings
     h2 {
@@ -12,7 +13,8 @@
     }
 
     .resourcing-table {
-        max-height: 400px;
+        max-height: calc(100% - 150px);
+        height: calc(100% - 150px);
         overflow: scroll;
         border-radius: 15px;
 

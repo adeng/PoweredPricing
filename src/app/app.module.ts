@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Import Material Angular Components
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -11,7 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 // Import this page's components
 import { SummaryPageComponentModule } from './pages/project/summary-page/summary-page.module';
@@ -25,6 +30,8 @@ import { PricingPageComponentModule } from './pages/project/pricing-page/pricing
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
@@ -32,6 +39,11 @@ import { PricingPageComponentModule } from './pages/project/pricing-page/pricing
     MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatListModule,
     SummaryPageComponentModule,
     ResourcingPageComponentModule,
     ScopingPageComponentModule,

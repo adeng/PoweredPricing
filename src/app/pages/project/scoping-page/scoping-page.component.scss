@@ -9,9 +9,9 @@
     }
 
     // Section specific settings
-    .header {
+    .header {}
 
-    }
+   
 
     .content {
         height: 100%;
@@ -25,12 +25,13 @@
             height: 100%;
             padding-top: 0 !important;
             background-color: white;
-            border-radius: 15px;
+            border-radius: 30px;
             overflow: scroll;
 
             .section {
                 position: absolute;
                 left: 30px;
+                top: 5%;
 
                 mat-checkbox {
                     display: block;
@@ -39,9 +40,15 @@
         }
 
         .scope-content {
-            width: 75% !important;
-            height: 100% !important;
-            padding: 0 !important;
+             width: 100%;
+             height: 0%;
+            // height: 100% !important;
+            // padding: 0 !important;
+
+            // top: 5px;
+
         }
+        
     }
+    
 }

@@ -7,6 +7,9 @@ import { ScopingPageComponent } from "./scoping-page.component";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -16,7 +19,10 @@ import { MatTabsModule } from '@angular/material/tabs';
         FormsModule,
         MatGridListModule,
         MatCheckboxModule,
-        MatTabsModule
+        MatTabsModule,
+        MatSliderModule,
+        MatInputModule,
+        MatFormFieldModule
     ],
     declarations: [ScopingPageComponent]
 })

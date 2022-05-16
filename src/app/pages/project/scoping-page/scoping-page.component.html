@@ -1,25 +1,27 @@
 <div class="container">
-	<div class="header">
-		<!-- <h2>Scoping Information</h2> -->
-	</div>
+    <div class="header">
+        <!-- <h2>Scoping Information</h2> -->
+    </div>
+
+
 
     <div class="content">
         <mat-grid-list cols="4">
-            <mat-grid-tile class="scope-list mat-card">
+            <mat-grid-tile class="scope-list">
                 <div class="section">
                     <h2>Financials</h2>
-					<mat-checkbox (change)="setArea('Record to Report')">Record to Report</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Record to Report')">Record to Report</mat-checkbox>
                     <mat-checkbox (change)="setArea('Procure to Pay')">Procure to Pay</mat-checkbox>
                     <mat-checkbox (change)="setArea('Order to Cash')">Order to Cash</mat-checkbox>
                     <mat-checkbox (change)="setArea('Plan to Perform')">Plan to Perform</mat-checkbox>
                     <mat-checkbox (change)="setArea('Acquire to Retire')">Acquire to Retire</mat-checkbox>
                     <h2>Governance</h2>
-					<mat-checkbox (change)="setArea('Project Management')">Project Management</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Project Management')">Project Management</mat-checkbox>
                     <mat-checkbox (change)="setArea('Change Management')">Change Management</mat-checkbox>
                     <mat-checkbox (change)="setArea('Security and Controls')">Security and Controls</mat-checkbox>
                     <mat-checkbox (change)="setArea('Tax')">Tax</mat-checkbox>
                     <h2>Additional Options</h2>
-					<mat-checkbox (change)="setArea('Innovation')">Innovation</mat-checkbox>
+                    <mat-checkbox (change)="setArea('Innovation')">Innovation</mat-checkbox>
                     <mat-checkbox (change)="setArea('Investment')">Investment</mat-checkbox>
                     <mat-checkbox (change)="setArea('Discounting')">Discounting</mat-checkbox>
                     <mat-checkbox (change)="setArea('Special Considerations')">Special Considerations</mat-checkbox>
@@ -35,14 +37,14 @@
                             <mat-checkbox checked="true">Discovery</mat-checkbox>
                             <mat-checkbox checked="true">Vision</mat-checkbox>
                             <mat-checkbox checked="true">Validate</mat-checkbox>
-                            
+
                             <h3>Staffing Considerations</h3>
                             <mat-checkbox>Using KGS</mat-checkbox>
                             <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
                         </div>
 
                     </mat-tab>
-                    
+
                     <mat-tab label="Details">
                         <div class="tab-details">
                             <h3>Assumptions</h3>
@@ -51,12 +53,12 @@
                                 <mat-label>Number of Current Business Units</mat-label>
                                 <input matInput type="number" />
                             </mat-form-field>
-                            
+
                             <mat-form-field>
                                 <mat-label>Number of Legal Entities</mat-label>
                                 <input matInput type="number" />
                             </mat-form-field>
-                            
+
                             <h3>Report Objects</h3>
 
                             <mat-form-field class="fricew-object">
@@ -101,7 +103,7 @@
                                 <mat-label>Complex</mat-label>
                                 <input matInput type="number" />
                             </mat-form-field>
-                            
+
                             <h3>Enhancement Objects</h3>
 
                             <mat-form-field class="fricew-object">
@@ -116,7 +118,7 @@
                                 <mat-label>Complex</mat-label>
                                 <input matInput type="number" />
                             </mat-form-field>
-                            
+
                             <h3>Workflows</h3>
 
                             <mat-form-field class="fricew-object">
@@ -133,7 +135,6 @@
                             </mat-form-field>
                         </div>
                     </mat-tab>
-                    
                     <mat-tab label="Advanced Modifiers">
                         <div class="tab-modifiers">
                             <h3>Complexity Considerations</h3>
@@ -148,4 +149,5 @@
             </mat-grid-tile>
         </mat-grid-list>
     </div>
+
 </div>

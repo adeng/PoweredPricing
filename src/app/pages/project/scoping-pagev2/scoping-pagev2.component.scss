@@ -15,7 +15,14 @@
     // Section specific settings
     .header {}
 
-   
+    .mat-stepper-vertical {
+        margin-top: 8px;
+      }
+      
+      .mat-form-field {
+        margin-top: 16px;
+      }
+
 
     .content {
         height: 100%;
@@ -52,7 +59,7 @@
                 position: absolute;
                 top: 0;
                 height: 100%;
-                width: calc(100% - 40px);
+               // width: calc(100% - 40px);
 
                 .tab-overview {
                     

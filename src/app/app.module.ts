@@ -23,6 +23,7 @@ import { SummaryPageComponentModule } from './pages/project/summary-page/summary
 import { ResourcingPageComponentModule } from './pages/project/resourcing-page/resourcing-page.module';
 import { ScopingPageComponentModule } from './pages/project/scoping-page/scoping-page.module';
 import { PricingPageComponentModule } from './pages/project/pricing-page/pricing-page.module';
+import { ScopingPagev2ComponentModule } from './pages/project/scoping-pagev2/scoping-pagev2.module';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PricingPageComponentModule } from './pages/project/pricing-page/pricing
     SummaryPageComponentModule,
     ResourcingPageComponentModule,
     ScopingPageComponentModule,
+    ScopingPagev2ComponentModule,
     PricingPageComponentModule
   ],
   providers: [],

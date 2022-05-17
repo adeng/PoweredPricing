@@ -24,7 +24,7 @@ import { ResourcingPageComponentModule } from './pages/project/resourcing-page/r
 import { ScopingPageComponentModule } from './pages/project/scoping-page/scoping-page.module';
 import { PricingPageComponentModule } from './pages/project/pricing-page/pricing-page.module';
 import { ScopingPagev2ComponentModule } from './pages/project/scoping-pagev2/scoping-pagev2.module';
-import { MatProgressBarModule } from '@angular/material';
+import { MatProgressBarModule, MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -52,6 +52,7 @@ import { MatProgressBarModule } from '@angular/material';
     ScopingPagev2ComponentModule,
     PricingPageComponentModule,
     MatProgressBarModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

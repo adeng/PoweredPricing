@@ -46,6 +46,7 @@
 </mat-toolbar> -->
 
 <mat-toolbar class="header">
+	<button mat-button (click)="openSnackBar('Fill out the project name and select the necessary system below. Please be sure to note of any special pricing considerations.', 'Close')" class="helpButton">Instructions</button>
 	<mat-icon class="icon-display">account_circle</mat-icon>
 	<img src="assets/kpmg-logo.png" />
 	<button mat-icon-button>
@@ -53,7 +54,6 @@
 	</button>
 
 	<h1>Powered Project Modeler Prototype</h1>
-	<!-- <mat-progress-bar class="Progress-Bar" mode="determinate" value="25" color="accent"></mat-progress-bar> -->
 </mat-toolbar>
 
 <mat-sidenav-container class="container">

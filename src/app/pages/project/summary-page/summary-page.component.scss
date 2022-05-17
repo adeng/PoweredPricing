@@ -22,15 +22,16 @@
         mat-form-field {
             width: 100%;
         }
+        .projectsButton{
+            position: absolute;
+            right: 7px;
+        }
     }
 
     .systems {
         margin-top: 20px;
         width: 100%;
 
-        mat-expansion-panel{
-            // background: rgb(76, 214, 12);
-        }
         .mat-expansion-panel.mat-expanded {
             background: rgb(117, 206, 229);
           }

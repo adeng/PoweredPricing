@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatGridListModule,
         MatFormFieldModule,
         MatCheckboxModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatMenuModule
     ],
     declarations: [SummaryPageComponent]
 })

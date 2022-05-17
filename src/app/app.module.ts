@@ -49,7 +49,7 @@ import { ScopingPagev2ComponentModule } from './pages/project/scoping-pagev2/sco
     ResourcingPageComponentModule,
     ScopingPageComponentModule,
     ScopingPagev2ComponentModule,
-    PricingPageComponentModule
+    PricingPageComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

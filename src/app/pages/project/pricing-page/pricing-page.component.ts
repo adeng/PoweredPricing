@@ -65,4 +65,6 @@ export class PricingPageComponent implements OnInit {
 
         return total / this.PRICING_DATA.length;
     }
+
+    
 }

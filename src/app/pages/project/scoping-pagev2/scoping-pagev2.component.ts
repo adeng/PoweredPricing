@@ -12,6 +12,7 @@ export class ScopingPagev2Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
   
   setArea(area: string): void {

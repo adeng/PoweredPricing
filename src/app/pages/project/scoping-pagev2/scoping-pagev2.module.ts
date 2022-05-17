@@ -13,7 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { MatProgressBarModule } from "@angular/material";
-
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
     imports: [
@@ -27,6 +27,7 @@ import { MatProgressBarModule } from "@angular/material";
         MatFormFieldModule,
         MatStepperModule,
         MatProgressBarModule,
+        MatExpansionModule,
     ],
     declarations: [ScopingPagev2Component],
     providers: [

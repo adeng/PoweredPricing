@@ -6,6 +6,13 @@
     padding-top: 0px;
  //   z-index: 2;
 
+ .icon-display {
+    transform: scale(2);
+    position: absolute;
+    right: 170px;
+    color: #eee;
+ }
+
     img {
         width: 120px;
         position: absolute;

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ResourcingPageComponent } from "./resourcing-page.component";
 
-import { MatTableModule } from '@angular/material';
+import { MatProgressBarModule, MatTableModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,7 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatSlideToggleModule,
         MatTableModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatProgressBarModule,
     ],
     declarations: [ResourcingPageComponent]
 })

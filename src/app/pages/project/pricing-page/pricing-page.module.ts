@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { PricingPageComponent } from "./pricing-page.component";
 
-import { MatTableModule } from '@angular/material';
+import { MatProgressBarModule, MatTableModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,7 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatTableModule,
         MatSlideToggleModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatProgressBarModule,
     ],
     declarations: [PricingPageComponent]
 })

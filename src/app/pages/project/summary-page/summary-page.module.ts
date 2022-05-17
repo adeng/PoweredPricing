@@ -10,6 +10,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatMenuModule} from '@angular/material/menu';
+import { MatProgressBarModule } from "@angular/material";
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { MatMenuModule} from '@angular/material/menu';
         MatFormFieldModule,
         MatCheckboxModule,
         MatExpansionModule,
-        MatMenuModule
+        MatMenuModule,
+        MatProgressBarModule,
     ],
     declarations: [SummaryPageComponent]
 })

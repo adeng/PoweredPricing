@@ -7,6 +7,16 @@
         font-weight: 400;
         font-size: x-large;
     }
+    .Progress-Bar {
+        width: 370px;
+        position:absolute;
+        right: 7px;
+        top: 25px;
+        height: 7px;
+     }
+     ::ng-deep .mat-progress-bar-fill::after {
+        background-color: #10ec9b;
+    }
 
     .header {
 

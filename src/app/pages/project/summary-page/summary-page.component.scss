@@ -27,9 +27,18 @@
     .systems {
         margin-top: 20px;
         width: 100%;
+
+        mat-expansion-panel{
+            // background: rgb(76, 214, 12);
+        }
+        .mat-expansion-panel.mat-expanded {
+            background: rgb(76, 214, 12);
+          }
     }
     
     .considerations {
         margin-top: 20px;
     }
+    
 }
+

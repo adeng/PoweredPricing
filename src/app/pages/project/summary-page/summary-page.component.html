@@ -2,13 +2,14 @@
 	<form>
 		<div class="header">
 			<h2>Project Information</h2>
+			<div class="Progress">Progress: 25%</div>
 			<mat-progress-bar class="Progress-Bar" mode="determinate" value="25" color="warn"></mat-progress-bar>
 			<mat-form-field>
 				<mat-label>Project Name</mat-label>
 				
 				<input matInput #projectName placeholder="Contoso Inc Cloud Financials Security" maxlength="40" required>
 				<mat-hint align="end">{{projectName.value?.length || 0}}/40</mat-hint>
-				<button mat-button [matMenuTriggerFor]="menu" class="projectsButton">Projects</button>
+				<button mat-raised-button [matMenuTriggerFor]="menu" class="projectsButton">Projects</button>
 				<mat-menu #menu="matMenu">
 				<button mat-menu-item>02213456 - [Thomson Reuters]</button>
 				<button mat-menu-item>1001234 - [Pfizer/Viatris]</button>

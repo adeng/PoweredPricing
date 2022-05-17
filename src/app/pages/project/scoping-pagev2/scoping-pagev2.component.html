@@ -6,7 +6,7 @@
     <h1> Financials </h1>
     <mat-progress-bar class="Progress-Bar" mode="determinate" value="50" color="warn"></mat-progress-bar>
     <div class="Progress">Progress: 50%</div>
-    <mat-vertical-stepper #stepper orientation="vertical">
+    <mat-vertical-stepper #stepper orientation="vertical" class="Financials-Stepper">
 
       <mat-step>
         <ng-template matStepLabel>Record to Report</ng-template>
@@ -638,7 +638,7 @@
     </mat-vertical-stepper>
 
     <h1> Governance </h1>
-    <mat-vertical-stepper orientation="vertical">
+    <mat-vertical-stepper orientation="vertical" class="Governance-Stepper">
       <mat-step>
         <ng-template matStepLabel>Project Management</ng-template>
         <ng-template matStepContent>
@@ -669,7 +669,7 @@
     </mat-vertical-stepper>
 
     <h1> Additional Options </h1>
-    <mat-vertical-stepper orientation="vertical">
+    <mat-vertical-stepper orientation="vertical" class="Additional-Stepper">
       <mat-step>
         <ng-template matStepLabel>Step 1</ng-template>
         <ng-template matStepContent>

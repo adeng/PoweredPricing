@@ -13,10 +13,16 @@
                 Expand for Workstreams
               </mat-panel-description>
         </mat-expansion-panel-header>
+        
+
+        <!--Vertical stepper start-->
         <mat-vertical-stepper #stepper orientation="vertical" class="Financials-Stepper">
 
             <mat-step>
               <ng-template matStepLabel>Record to Report</ng-template>
+              <!-- Scoping Tabs -->
+                  <mat-grid-list cols="2" rowHeight="1:1">
+                <mat-grid-tile>
                 <mat-tab-group mat-align-tabs="center">
                   <mat-tab label="Overview">
                       
@@ -26,6 +32,9 @@
                           <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
                           <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
                           <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
+                          <p><mat-checkbox checked="true">Construct</mat-checkbox></p>
+                          <p><mat-checkbox checked="true">Deploy</mat-checkbox></p>
+                          <p><mat-checkbox checked="true">Evolve</mat-checkbox></p>
       
                           <h3>Staffing Considerations</h3>
                           <p><mat-checkbox>Using KGS</mat-checkbox></p>
@@ -135,7 +144,33 @@
                       </div>
                   </mat-tab>
               </mat-tab-group>
-      
+                
+            </mat-grid-tile>
+            <!-- Scoping Tab Readout-->
+            <mat-grid-tile>
+                <div class="resourcing-table mat-card">
+               
+                    <table mat-table #table [dataSource]="RESOURCING_DATA">
+                    
+                        <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+                            <th mat-header-cell *matHeaderCellDef>{{displayColumns[column]}}</th>
+            
+                            <td mat-cell *matCellDef="let resource" [ngSwitch]="column"> 
+                               
+                                <p *ngSwitchCase="'fte'">{{resource.active ? resource.fte : 0}}</p>
+                                <p *ngSwitchCase="'estimated_hours'">{{resource.fte * HOURS_CONSTANT}}</p>
+                                <p *ngSwitchCase="'allocation'">{{calculateAllocation(resource) | percent}}</p>
+                                <p *ngSwitchDefault>{{resource[column]}}</p>
+                            </td>
+                        </ng-container>
+            
+                        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+                    </table>
+                </div>
+            </mat-grid-tile>
+            </mat-grid-list>
+
             </mat-step>
       
             <mat-step>
@@ -643,6 +678,7 @@
       
       
           </mat-vertical-stepper>
+
     </mat-expansion-panel>
     <mat-progress-bar class="Progress-Bar" mode="determinate" value="50" color="warn"></mat-progress-bar>
     <div class="Progress">Progress: 50%</div>

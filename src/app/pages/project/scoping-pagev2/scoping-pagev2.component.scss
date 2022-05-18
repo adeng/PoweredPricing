@@ -145,5 +145,35 @@
         }
         
     }
+
+    .resourcing-table {
+       // max-height: calc(100% - 150px);
+        height: calc(100% - 5px);
+        width: 100%;
+       // overflow: scroll;
+        border-radius: 5px;
+
+        table {
+            width: 100%;
+            padding: 0 15px;
+
+            .mat-header-cell {
+                // background-color: #0288D1;
+                // color: white;
+                font-size: large;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .mat-cell {
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            input {
+                height: 100%;
+            }
+        }
+    }
     
 }

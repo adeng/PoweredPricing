@@ -14,6 +14,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { MatProgressBarModule } from "@angular/material";
 import { MatExpansionModule } from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
     imports: [
@@ -28,6 +30,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatStepperModule,
         MatProgressBarModule,
         MatExpansionModule,
+        MatTableModule,
+        MatSlideToggleModule
     ],
     declarations: [ScopingPagev2Component],
     providers: [

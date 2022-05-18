@@ -7,13 +7,15 @@
 			<mat-progress-bar class="Progress-Bar" mode="determinate" value="25" color="warn"></mat-progress-bar>
 			<mat-form-field>
 				<mat-label>Project Name</mat-label>
-				
-				<input matInput #projectName placeholder="Contoso Inc Cloud Financials Security" maxlength="40" required>
+
+				<input matInput #projectName placeholder="Contoso Inc Cloud Financials Security" maxlength="40"
+					required>
 				<mat-hint align="end">{{projectName.value?.length || 0}}/40</mat-hint>
-				<button mat-raised-button [matMenuTriggerFor]="menu" class="projectsButton" color="primary">Projects</button>
+				<button mat-raised-button [matMenuTriggerFor]="menu" class="projectsButton"
+					color="primary">Projects</button>
 				<mat-menu #menu="matMenu">
-				<button mat-menu-item>02213456 - [Thomson Reuters]</button>
-				<button mat-menu-item>1001234 - [Pfizer/Viatris]</button>
+					<button mat-menu-item>02213456 - [Thomson Reuters]</button>
+					<button mat-menu-item>1001234 - [Pfizer/Viatris]</button>
 				</mat-menu>
 			</mat-form-field>
 		</div>
@@ -28,26 +30,26 @@
 						</mat-panel-title>
 						<mat-panel-description>
 							(Financials, EPM, RM)
-						  </mat-panel-description>
+						</mat-panel-description>
 					</mat-expansion-panel-header>
 					<mat-checkbox class="financialsBox">Financials</mat-checkbox>
 					<mat-checkbox>Enterprise Performance Management</mat-checkbox>
 					<mat-checkbox>Risk Management</mat-checkbox>
 				</mat-expansion-panel>
-				
+
 				<mat-expansion-panel>
 					<mat-expansion-panel-header class="Workday">
 						<mat-panel-title>
 							Workday
 						</mat-panel-title>
 						<mat-panel-description>
-						(FM, HCM)
+							(FM, HCM)
 						</mat-panel-description>
 					</mat-expansion-panel-header>
 					<mat-checkbox>Financial Management</mat-checkbox>
 					<mat-checkbox>Human Capital Management</mat-checkbox>
 				</mat-expansion-panel>
-				
+
 				<mat-expansion-panel>
 					<mat-expansion-panel-header class="Salesforce">
 						<mat-panel-title>
@@ -55,13 +57,13 @@
 						</mat-panel-title>
 						<mat-panel-description>
 							(Sales, Services, Marketing)
-						  </mat-panel-description>
+						</mat-panel-description>
 					</mat-expansion-panel-header>
 					<mat-checkbox>Sales Cloud</mat-checkbox>
 					<mat-checkbox>Services Cloud</mat-checkbox>
 					<mat-checkbox>Marketing Cloud</mat-checkbox>
 				</mat-expansion-panel>
-				
+
 				<mat-expansion-panel>
 					<mat-expansion-panel-header class="Guidewire">
 						<mat-panel-title>
@@ -87,4 +89,3 @@
 		</div>
 	</form>
 </div>
-

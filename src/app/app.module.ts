@@ -25,10 +25,12 @@ import { ScopingPageComponentModule } from './pages/project/scoping-page/scoping
 import { PricingPageComponentModule } from './pages/project/pricing-page/pricing-page.module';
 import { ScopingPagev2ComponentModule } from './pages/project/scoping-pagev2/scoping-pagev2.module';
 import { MatProgressBarModule, MatSnackBarModule } from '@angular/material';
+import { HomePageComponent } from './pages/home/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,

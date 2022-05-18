@@ -86,8 +86,9 @@
 
 .container {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     position: absolute;
+    height: calc(100% - 100px);
     top: 100px;
     bottom: 60px;
     left: 0;

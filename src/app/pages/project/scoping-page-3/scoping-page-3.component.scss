@@ -23,8 +23,8 @@
 
                 .kpi {
                     display: inline-block;
-                    padding-left: 14%;
-                    padding-right: 14%;
+                    padding-left: 12%;
+                    padding-right: 12%;
 
                     h2 {
                         margin-top: 15px;
@@ -40,6 +40,10 @@
                 }
 
                 .kpi-2 {
+                    border-left: 2px solid lightgrey;
+                }
+
+                .kpi-3 {
                     border-left: 2px solid lightgrey;
                 }
             }

@@ -20,7 +20,7 @@
                         <p>Hours</p>
                     </div>
                     <div class="kpi kpi-2">
-                        <h2>{{calculateTotalCost() | currency}}</h2>
+                        <h2>${{calculateTotalCost() | number: '1.0-0'}}</h2>
                         <p>Total Cost</p>
                     </div>
                     <div class="kpi kpi-3">
@@ -61,7 +61,7 @@
                                 <th mat-header-cell *matHeaderCellDef>{{pricingDisplayColumns[column]}}</th>
 
                                 <td mat-cell *matCellDef="let resource" [ngSwitch]="column">
-                                    <p *ngSwitchCase="'fees'">{{calculateTotalCost() * resource[column] | currency}}</p>
+                                    <p *ngSwitchCase="'fees'">${{calculateTotalCost() * resource[column] | number: '1.0-0'}}</p>
                                     <p *ngSwitchCase="'margin'">{{margin | percent}}</p>
                                     <p *ngSwitchCase="'erp'">{{resource[column] + ERP_MODIFIER | percent}}</p>
                                     <p *ngSwitchCase="'rph'">{{resource[column] * RPH_MODIFIER | number:'1.0-0'}}</p>
@@ -70,9 +70,8 @@
 
                                 <td mat-footer-cell *matFooterCellDef [ngSwitch]="column">
                                     <p *ngSwitchCase="'process'"><b>Total</b></p>
-                                    <p *ngSwitchCase="'fees'"><b>{{calculateTotalCost() | currency}}</b></p>
-                                    <p *ngSwitchCase="'margin'"><b>{{margin | percent}}</b>
-                                    </p>
+                                    <p *ngSwitchCase="'fees'"><b>${{calculateTotalCost() | number: '1.0-0'}}</b></p>
+                                    <p *ngSwitchCase="'margin'"><b>{{margin | percent}}</b></p>
                                     <p *ngSwitchCase="'erp'"><b>{{calculateAverageMetric("erp") | percent}}</b></p>
                                     <p *ngSwitchCase="'rph'"><b>{{calculateAverageMetric("rph") * RPH_MODIFIER | number:'1.0-0'}}</b></p>
                                 </td>

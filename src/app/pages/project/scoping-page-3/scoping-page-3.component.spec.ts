@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScopingPagev2Component } from './scoping-page-3.component';
+import { ScopingPage3Component } from './scoping-page-3.component';
 
 describe('ScopingPagev2Component', () => {
-  let component: ScopingPagev2Component;
-  let fixture: ComponentFixture<ScopingPagev2Component>;
+  let component: ScopingPage3Component;
+  let fixture: ComponentFixture<ScopingPage3Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScopingPagev2Component ]
+      declarations: [ ScopingPage3Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ScopingPagev2Component);
+    fixture = TestBed.createComponent(ScopingPage3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

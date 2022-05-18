@@ -10,7 +10,7 @@ export class ScopingPage3Component implements OnInit {
 	MODIFIER: number = 1;
 	margin: number = 0.4;
 	currentArea: string = "Record to Report";
-	HOURS_CONSTANT: number = 120;
+	HOURS_CONSTANT: number = 1200;
 	ERP_MODIFIER: number = 0;
 	RPH_MODIFIER: number = 1;
 	RATE_CARD: Object = {
@@ -106,27 +106,6 @@ export class ScopingPage3Component implements OnInit {
 		}
 
 	PRICING_DATA: Array<Object> = [
-		{
-			process: "Functional",
-			fees: 0.5,
-			margin: 0.4,
-			erp: 0.2,
-			rph: 250
-		},
-		{
-			process: "Technical",
-			fees: (1/3),
-			margin: 0.42,
-			erp: 0.21,
-			rph: 263
-		},
-		{
-			process: "Governance",
-			fees: (1/6),
-			margin: 0.43,
-			erp: 0.2,
-			rph: 267
-		}
 	];
 
 	pricingColumns: Array<string> = ["process", "fees", "margin", "erp", "rph"];
@@ -149,10 +128,32 @@ export class ScopingPage3Component implements OnInit {
 
 	modules: Array<string> = ["Record to Report", "Procure to Pay", "Order to Cash", "Acquire to Retire", "Project Management", "Security and Controls", "Tax", "Change Management"];
 
-	constructor() { }
+	constructor() { 
+		this.fillPricingData();
+	}
 
 	ngOnInit() {
 
+	}
+
+	fillPricingData() {
+		for(let i = 0; i < this.modules.length; i++) {
+			this.PRICING_DATA.push({
+				process: this.modules[i],
+				fees: (0.8/this.modules.length),
+				margin: 0.4,
+				erp: 0.2 + (Math.round(Math.random() * 4) * 0.01) - 0.01,
+				rph: 250 + (Math.round(Math.random() * 15) - 15)
+			})
+		}
+
+		this.PRICING_DATA.push({
+			process: "Technical",
+			fees: 0.2,
+			margin: 0.41,
+			erp: 0.22,
+			rph: 255
+		});
 	}
 
 	calculateAllocation(resource: Object): number {
@@ -225,18 +226,20 @@ export class ScopingPage3Component implements OnInit {
 
 	updateKGS(event: any) {
 		if (event.checked) {
-			this.RESOURCING_DATA[7]["fte"] += 2;
-			this.RESOURCING_DATA[8]["fte"] += 2;
+			this.RESOURCING_DATA[7]["fte"] += 1.5;
+			this.RESOURCING_DATA[8]["fte"] += 1.5;
 			this.margin += 0.02;
 			this.ERP_MODIFIER += 0.02;
 			this.RPH_MODIFIER -= 0.03;
+			this.RATE_CARD["SA"] = 125;
 		}
 		else {
-			this.RESOURCING_DATA[7]["fte"] -= 2;
-			this.RESOURCING_DATA[8]["fte"] -= 2;
+			this.RESOURCING_DATA[7]["fte"] -= 1.5;
+			this.RESOURCING_DATA[8]["fte"] -= 1.5;
 			this.margin -= 0.02;
 			this.ERP_MODIFIER -= 0.02;
 			this.RPH_MODIFIER += 0.03;
+			this.RATE_CARD["SA"] = 275;
 		}
 	}
 

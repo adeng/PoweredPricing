@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from "@angular/material";
 
 @Component({
     selector: 'app-pricing-page',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./pricing-page.component.scss']
 })
 export class PricingPageComponent implements OnInit {
-
+    
     PRICING_DATA: Array<Object> = [
         {
             process: "Functional",
@@ -40,7 +41,13 @@ export class PricingPageComponent implements OnInit {
         rph: "Average RPH"
     }
 
-    constructor() { }
+    constructor(public snackBar: MatSnackBar) { }
+    openSnackBar(message: string, action: string) 
+    {
+        this.snackBar.open(message, action, {
+           duration: 70000,
+        });
+     }
 
     ngOnInit() {
     }

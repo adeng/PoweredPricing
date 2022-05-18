@@ -2,6 +2,10 @@
 	<div class="header">
 		<h2>Pricing Information</h2>
 		<p>This is the calculated fees and metrics for your engagement.</p>
+		<button mat-raised-button (click)="openSnackBar('This section is to explain how we arrived at our calculations', 'Close')" class="aboutButton">Info</button>
+		<!-- <button mat-icon-button aria-label="Example icon-button with a heart icon">
+			<mat-icon>favorite</mat-icon>
+		  </button> -->
 	</div>
 	<mat-progress-bar class="Progress-Bar" mode="determinate" value="100" color="warn"></mat-progress-bar>
 	<div class="Progress">Progress: 100%</div>

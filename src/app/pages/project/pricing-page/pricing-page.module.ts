@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { PricingPageComponent } from "./pricing-page.component";
 
-import { MatProgressBarModule, MatTableModule } from '@angular/material';
+import { MatIconModule, MatProgressBarModule, MatTableModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule, MatButtonModule } from "@angular/material";
+
 
 @NgModule({
     imports: [
@@ -18,6 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatInputModule,
         MatFormFieldModule,
         MatProgressBarModule,
+        MatButtonModule,
+        MatIconModule
     ],
     declarations: [PricingPageComponent]
 })

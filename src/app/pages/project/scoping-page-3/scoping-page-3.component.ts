@@ -11,6 +11,8 @@ export class ScopingPage3Component implements OnInit {
 	margin: number = 0.4;
 	currentArea: string = "Record to Report";
 	HOURS_CONSTANT: number = 120;
+	ERP_MODIFIER: number = 0;
+	RPH_MODIFIER: number = 1;
 	RATE_CARD: Object = {
 		P: 500,
 		D: 400,
@@ -103,6 +105,31 @@ export class ScopingPage3Component implements OnInit {
 			active: true
 		}
 
+	PRICING_DATA: Array<Object> = [
+		{
+			process: "Functional",
+			fees: 0.5,
+			margin: 0.4,
+			erp: 0.2,
+			rph: 250
+		},
+		{
+			process: "Technical",
+			fees: (1/3),
+			margin: 0.42,
+			erp: 0.21,
+			rph: 263
+		},
+		{
+			process: "Governance",
+			fees: (1/6),
+			margin: 0.43,
+			erp: 0.2,
+			rph: 267
+		}
+	];
+
+	pricingColumns: Array<string> = ["process", "fees", "margin", "erp", "rph"];
 	columns: Array<string> = ["title", "estimated_hours", "allocation"]
 	displayColumns: Object = {
 		title: "Resource Title",
@@ -110,6 +137,14 @@ export class ScopingPage3Component implements OnInit {
 		fte: "FTE",
 		estimated_hours: "Estimated Hours",
 		allocation: "Allocation %"
+	}
+
+	pricingDisplayColumns: Object = {
+		process: "Process Area",
+		fees: "Billable Fees",
+		margin: "Margin %",
+		erp: "ERP %",
+		rph: "Average RPH"
 	}
 
 	modules: Array<string> = ["Record to Report", "Procure to Pay", "Order to Cash", "Acquire to Retire", "Project Management", "Security and Controls", "Tax", "Change Management"];
@@ -153,6 +188,34 @@ export class ScopingPage3Component implements OnInit {
 		return cost;
 	}
 
+	calculateTotalFees(): number {
+		let total = 0;
+
+		for (let i = 0; i < this.PRICING_DATA.length; i++) {
+			total += this.PRICING_DATA[i]["fees"];
+		}
+
+		return total;
+	}
+
+
+	calculateAverageMetric(metric: string): number {
+		let total = 0;
+
+		for (let i = 0; i < this.PRICING_DATA.length; i++) {
+			if(metric == "erp") {
+				total += this.ERP_MODIFIER;
+				total += this.PRICING_DATA[i][metric];
+			}
+			else if(metric == "rph")
+				total += this.PRICING_DATA[i][metric] * this.RPH_MODIFIER;
+			else
+				total += this.PRICING_DATA[i][metric];
+		}
+
+		return total / this.PRICING_DATA.length;
+	}
+
 	updateModifier(event: any, amount: number) {
 		if (event.checked)
 			this.MODIFIER += amount;
@@ -165,11 +228,15 @@ export class ScopingPage3Component implements OnInit {
 			this.RESOURCING_DATA[7]["fte"] += 2;
 			this.RESOURCING_DATA[8]["fte"] += 2;
 			this.margin += 0.02;
+			this.ERP_MODIFIER += 0.02;
+			this.RPH_MODIFIER -= 0.03;
 		}
 		else {
 			this.RESOURCING_DATA[7]["fte"] -= 2;
 			this.RESOURCING_DATA[8]["fte"] -= 2;
 			this.margin -= 0.02;
+			this.ERP_MODIFIER -= 0.02;
+			this.RPH_MODIFIER += 0.03;
 		}
 	}
 
@@ -178,23 +245,31 @@ export class ScopingPage3Component implements OnInit {
 			this.RESOURCING_DATA[2]["fte"] = 0.75;
 			this.RESOURCING_DATA[3]["fte"] = 1;
 			this.margin -= 0.01;
+			this.ERP_MODIFIER -= 0.01;
+			this.RPH_MODIFIER += 0.01;
 		}
 		else {
 			this.RESOURCING_DATA[2]["fte"] = 0.75;
 			this.RESOURCING_DATA[3]["fte"] = 0;
 			this.margin += 0.01;
+			this.ERP_MODIFIER += 0.01;
+			this.RPH_MODIFIER -= 0.01;
 		}
 	}
 
-	
+
 	updatePartner(event: any) {
 		if (event.checked) {
 			this.RESOURCING_DATA[0]["fte"] += 0.25;
 			this.margin -= 0.01;
+			this.ERP_MODIFIER -= 0.02;
+			this.RPH_MODIFIER += 0.02;
 		}
 		else {
 			this.RESOURCING_DATA[0]["fte"] -= 0.25;
 			this.margin += 0.01;
+			this.ERP_MODIFIER += 0.02;
+			this.RPH_MODIFIER -= 0.01;
 		}
 	}
 

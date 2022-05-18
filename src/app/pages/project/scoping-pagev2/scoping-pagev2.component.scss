@@ -1,7 +1,7 @@
 .container {
     padding: 20px;
     height: calc(100% - 40px);
-
+overflow: auto;
     // Global page settings
     h2 {
         font-weight: 400;
@@ -11,61 +11,77 @@
     h3 {
         font-weight: 400;
     }
-    .Progress{
-        position:absolute;
+
+    .Progress {
+        position: absolute;
         right: 137px;
         top: 37px;
     }
+
     .Progress-Bar {
         width: 370px;
-        position:absolute;
+        position: absolute;
         right: 7px;
         top: 25px;
         height: 7px;
-     }
-     ::ng-deep .mat-progress-bar-fill::after {
+    }
+
+    ::ng-deep .mat-progress-bar-fill::after {
         background-color: #10ec7c;
     }
 
     ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
         opacity: 0.03 !important;
-        background-color: #7a4cd7!important;
-      }
-    
-    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: #7a4cd7 !important;
+    }
+
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
         //background-color: #f37d16;
         background-color: #7a4cd7;
-      }
+    }
 
     .Financials-Stepper {
         // color:red;
         // background: rgb(237, 228, 154);
-        background: rgb(211, 249, 255);
-     }
-     .Governance-Stepper {
+        background: rgb(255, 255, 255);
+        overflow: auto;
+    }
+
+    .Governance-Stepper {
         // color:red;
         background: rgb(211, 249, 255);
-     }
-     .Additional-Stepper {
+    }
+
+    .Additional-Stepper {
         // color:red;
         //background: rgb(237, 194, 154);
         background: rgb(211, 249, 255);
-     }
+    }
+
     // Section specific settings
     .header {}
 
     .mat-stepper-vertical {
         margin-top: 8px;
-      }
-      
-      .mat-form-field {
-        margin-top: 16px;
-      }
+    }
 
+    .mat-form-field {
+        margin-top: 16px;
+    }
+
+    .workstream {
+        height: 100%;
+        width: 100%;
+        padding: 0%;
+        overflow: auto;
+
+    }
 
     .content {
         height: 100%;
-        width:50%;
+        width: 100%;
+
         mat-grid-list {
             height: 100%;
             padding: 0 !important;
@@ -98,16 +114,17 @@
                 position: absolute;
                 top: 0;
                 height: 100%;
-               // width: calc(100% - 40px);
+                // width: calc(100% - 40px);
 
                 .tab-overview {
-                    
+
                     mat-checkbox {
                         display: block;
                     }
                 }
 
                 .tab-details {
+                    overflow: auto;
                     padding: 20px;
 
                     h3 {
@@ -143,22 +160,22 @@
                 }
             }
         }
-        
+
     }
 
     .resourcing-table {
-       // max-height: calc(100% - 150px);
-        height: calc(100% - 5px);
+        height: 100%;
         width: 100%;
-       // overflow: scroll;
-        border-radius: 5px;
+
+        // overflow: scroll;
+        //  border-radius: 5px;
 
         table {
             width: 100%;
             padding: 0 15px;
 
             .mat-header-cell {
-                // background-color: #0288D1;
+                background-color: #b4b4b4;
                 // color: white;
                 font-size: large;
                 vertical-align: middle;
@@ -166,6 +183,7 @@
             }
 
             .mat-cell {
+                background-color: #d8d8d8;
                 vertical-align: middle;
                 text-align: center;
             }
@@ -175,5 +193,5 @@
             }
         }
     }
-    
+
 }

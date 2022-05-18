@@ -1,3 +1,48 @@
-<p>
-  home-page works!
-</p>
+<div class="container">
+	<mat-grid-list cols="12" rowHeight="100px" id="main-grid">
+		<mat-grid-tile rowspan="1" colspan="12">
+			<h1>Good Morning Christian Leva!</h1>
+		</mat-grid-tile>
+
+        <mat-grid-tile rowspan="7" colspan="3">
+			<mat-card>
+				<mat-action-list>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>add</mat-icon>
+						<div mat-line>Create Project</div>
+					</mat-list-item>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>folder_open</mat-icon>
+						<div mat-line>Open Project</div>
+					</mat-list-item>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>input</mat-icon>
+						<div mat-line>Import Pricing</div>
+					</mat-list-item>
+				</mat-action-list>
+			</mat-card>
+		</mat-grid-tile>
+
+		<mat-grid-tile rowspan="7" colspan="9">
+			<mat-card class="recent-projects-card">
+				<mat-card-header>
+					<h2>Recent Projects</h2>
+				</mat-card-header>
+				<mat-action-list>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>folder</mat-icon>
+						<div mat-line>Contoso Powered Pricing</div>
+					</mat-list-item>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>folder</mat-icon>
+						<div mat-line>Vision Pricing</div>
+					</mat-list-item>
+					<mat-list-item routerLink="/project/scoping">
+						<mat-icon mat-list-icon>folder</mat-icon>
+						<div mat-line>Test Client Pricing</div>
+					</mat-list-item>
+				</mat-action-list>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>

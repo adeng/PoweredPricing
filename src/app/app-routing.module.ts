@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { HomePageComponent } from './pages/home/home-page/home-page.component';
 import { PricingPageComponent } from './pages/project/pricing-page/pricing-page.component';
 import { ResourcingPageComponent } from './pages/project/resourcing-page/resourcing-page.component';
 import { ScopingPage3Component } from './pages/project/scoping-page-3/scoping-page-3.component';
@@ -10,8 +11,12 @@ import { SummaryPageComponent } from './pages/project/summary-page/summary-page.
 const routes: Routes = [
 	{
 		path: '',
-		redirectTo: '/project/summary',
+		redirectTo: '/home',
 		pathMatch: 'full'
+	},
+	{
+		path: 'home',
+		component: HomePageComponent
 	},
 	{
 		path: 'project/summary',

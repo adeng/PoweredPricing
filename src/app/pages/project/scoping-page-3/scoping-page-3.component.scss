@@ -105,6 +105,23 @@
                 }
             }
 
+            .tab-modifiers {
+                padding: 20px;
+
+                mat-checkbox {
+                    display: block;
+                }
+
+                h3.override-header {
+                    margin-top: 50px;
+                    margin-bottom: 0px;
+                }
+
+                mat-slider {
+                    width: 70%;
+                }
+            }
+
         }
     }
 

@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./scoping-page-3.component.scss']
 })
 export class ScopingPage3Component implements OnInit {
-
+	selectedModule: string = "Record to Report";
 	MODIFIER: number = 1;
+	margin: number = 0.4;
 	currentArea: string = "Record to Report";
 	HOURS_CONSTANT: number = 120;
 	RATE_CARD: Object = {
@@ -23,7 +24,7 @@ export class ScopingPage3Component implements OnInit {
 		{
 			title: "Engagement Partner",
 			level: "P",
-			fte: 0.1,
+			fte: 0.25,
 			allocation: 0,
 			active: true
 		},
@@ -161,18 +162,40 @@ export class ScopingPage3Component implements OnInit {
 
 	updateKGS(event: any) {
 		if (event.checked) {
-			this.RESOURCING_DATA.push(this.kgs_guy);
+			this.RESOURCING_DATA[7]["fte"] += 2;
+			this.RESOURCING_DATA[8]["fte"] += 2;
+			this.margin += 0.02;
 		}
-		else
-			this.RESOURCING_DATA.splice(this.RESOURCING_DATA.indexOf(this.kgs_guy), 1);
+		else {
+			this.RESOURCING_DATA[7]["fte"] -= 2;
+			this.RESOURCING_DATA[8]["fte"] -= 2;
+			this.margin -= 0.02;
+		}
 	}
 
 	updateLead(event: any) {
 		if (event.checked) {
-			this.RESOURCING_DATA.push(this.lead_guy);
+			this.RESOURCING_DATA[2]["fte"] = 0.75;
+			this.RESOURCING_DATA[3]["fte"] = 1;
+			this.margin -= 0.01;
 		}
-		else
-			this.RESOURCING_DATA.splice(this.RESOURCING_DATA.indexOf(this.lead_guy), 1);
+		else {
+			this.RESOURCING_DATA[2]["fte"] = 0.75;
+			this.RESOURCING_DATA[3]["fte"] = 0;
+			this.margin += 0.01;
+		}
+	}
+
+	
+	updatePartner(event: any) {
+		if (event.checked) {
+			this.RESOURCING_DATA[0]["fte"] += 0.25;
+			this.margin -= 0.01;
+		}
+		else {
+			this.RESOURCING_DATA[0]["fte"] -= 0.25;
+			this.margin += 0.01;
+		}
 	}
 
 	setArea(area: string): void {

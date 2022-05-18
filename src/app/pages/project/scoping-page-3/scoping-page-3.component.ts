@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScopingPage3Component implements OnInit {
 
+	MODIFIER: number = 1;
 	currentArea: string = "Record to Report";
 	HOURS_CONSTANT: number = 120;
+	RATE_CARD: Object = {
+		P: 500,
+		D: 400,
+		M: 350,
+		SA: 275,
+		A: 200,
+		KGS: 50
+	};
+
 	RESOURCING_DATA: Array<Object> = [
 		{
 			title: "Engagement Partner",
@@ -74,6 +84,24 @@ export class ScopingPage3Component implements OnInit {
 			active: true
 		}
 	]
+	kgs_guy: Object =
+		{
+			title: "Offshore Support",
+			level: "KGS",
+			fte: 5,
+			allocation: 0,
+			active: true
+		}
+
+	lead_guy: Object =
+		{
+			title: "Lead",
+			level: "M",
+			fte: 1,
+			allocation: 0,
+			active: true
+		}
+
 	columns: Array<string> = ["title", "estimated_hours", "allocation"]
 	displayColumns: Object = {
 		title: "Resource Title",
@@ -83,7 +111,7 @@ export class ScopingPage3Component implements OnInit {
 		allocation: "Allocation %"
 	}
 
-	modules: Array<string> = ["Record to Report", "Procure to Pay", "Order to Cash", "Acquire to Retire"];
+	modules: Array<string> = ["Record to Report", "Procure to Pay", "Order to Cash", "Acquire to Retire", "Project Management", "Security and Controls", "Tax", "Change Management"];
 
 	constructor() { }
 
@@ -102,6 +130,49 @@ export class ScopingPage3Component implements OnInit {
 		}
 
 		return resource["fte"] / fteSum;
+	}
+
+	calculateTotalHours(): number {
+		let hours = 0;
+
+		for (let i = 0; i < this.RESOURCING_DATA.length; i++) {
+			hours += this.RESOURCING_DATA[i]["fte"] * this.HOURS_CONSTANT * this.MODIFIER;
+		}
+
+		return hours;
+	}
+
+	calculateTotalCost(): number {
+		let cost = 0;
+
+		for (let i = 0; i < this.RESOURCING_DATA.length; i++) {
+			cost += this.RESOURCING_DATA[i]["fte"] * this.HOURS_CONSTANT * this.MODIFIER * this.RATE_CARD[this.RESOURCING_DATA[i]["level"]];
+		}
+
+		return cost;
+	}
+
+	updateModifier(event: any, amount: number) {
+		if (event.checked)
+			this.MODIFIER += amount;
+		else
+			this.MODIFIER -= amount;
+	}
+
+	updateKGS(event: any) {
+		if (event.checked) {
+			this.RESOURCING_DATA.push(this.kgs_guy);
+		}
+		else
+			this.RESOURCING_DATA.splice(this.RESOURCING_DATA.indexOf(this.kgs_guy), 1);
+	}
+
+	updateLead(event: any) {
+		if (event.checked) {
+			this.RESOURCING_DATA.push(this.lead_guy);
+		}
+		else
+			this.RESOURCING_DATA.splice(this.RESOURCING_DATA.indexOf(this.lead_guy), 1);
 	}
 
 	setArea(area: string): void {

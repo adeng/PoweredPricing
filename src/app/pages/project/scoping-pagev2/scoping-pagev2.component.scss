@@ -1,7 +1,7 @@
 .container {
     padding: 20px;
     height: calc(100% - 40px);
-
+overflow: auto;
     // Global page settings
     h2 {
         font-weight: 400;

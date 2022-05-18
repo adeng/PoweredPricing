@@ -14,7 +14,19 @@
  }
  .helpButton {
     position: absolute;
-    right: 217px;
+    right: 350px;
+ }
+ .warningButton {
+    transform: scale(1.5);
+    position: absolute;
+    right: 250px;
+    color:rgb(255, 251, 0)
+ }
+ .errorButton {
+    transform: scale(1.5);
+    position: absolute;
+    right: 300px;
+    color:#ff0000
  }
 //  .Progress-Bar {
 //     width: 370px;

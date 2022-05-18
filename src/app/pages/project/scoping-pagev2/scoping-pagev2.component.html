@@ -10,955 +10,776 @@
                 Financials
             </mat-panel-title>
             <mat-panel-description>
-                Expand for Workstreams
+                Expand for Core Workstream Scoping
             </mat-panel-description>
         </mat-expansion-panel-header>
 
         <!-- Scoping Tabs -->
-        <mat-grid-list cols="2" rowHeight="1:1">
+        <mat-grid-list cols="2" rowHeight="1:1" class="workstream">
             <mat-grid-tile>
-                <!-- Functional Workstreams-->
-                <div><mat-expansion-panel expanded="false">
-                    <mat-expansion-panel-header class="OCA">
-                        <mat-panel-title>
-                            Record to Report
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Expand for Detailed Scoping
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+                <!-- Functional Workstreams Accordion-->
+                <div class="container">
+                <mat-accordion>
+                    <!-- R2R-->
+                    <mat-expansion-panel expanded="false">
+                        <mat-expansion-panel-header class="OCA">
+                            <mat-panel-title>
+                                Record to Report
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Expand for Detailed Scoping
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
 
-                    <mat-tab-group mat-align-tabs="center">
-                        <mat-tab label="Overview">
+                        <mat-tab-group mat-align-tabs="center">
+                            <mat-tab label="Overview">
 
-                            <div class="tab-overview">
+                                <div class="tab-overview">
 
-                                <h3>Phases in Scope</h3>
-                                <p>
-                                    <mat-checkbox checked="true">Discovery</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Vision</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Validate</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Construct</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Deploy</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Evolve</mat-checkbox>
-                                </p>
+                                    <h3>Phases in Scope</h3>
+                                    <p>
+                                        <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Vision</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Validate</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Construct</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                    </p>
 
-                                <h3>Staffing Considerations</h3>
-                                <p>
-                                    <mat-checkbox>Using KGS</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
-                                </p>
+                                    <h3>Staffing Considerations</h3>
+                                    <p>
+                                        <mat-checkbox>Using KGS</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Partner Lead</mat-checkbox>
+                                    </p>
 
-                            </div>
-                        </mat-tab>
+                                </div>
+                            </mat-tab>
 
-                        <mat-tab label="Details">
-                            <div class="tab-details">
-                                <h3>Assumptions</h3>
+                            <mat-tab label="Details">
+                                <div class="tab-details">
+                                    <h3>Assumptions</h3>
 
-                                <mat-form-field>
-                                    <mat-label>Number of Current Business Units</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field>
+                                        <mat-label>Number of Current Business Units</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <mat-form-field>
-                                    <mat-label>Number of Legal Entities</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field>
+                                        <mat-label>Number of Legal Entities</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <h3>Report Objects</h3>
+                                    <h3>Number of Custom Reports</h3>
 
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <h3>Integration Objects</h3>
+                                    <h3>Integration Objects</h3>
 
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <h3>Conversion Data Objects</h3>
+                                    <h3>Conversion Data Objects</h3>
 
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <h3>Enhancement Objects</h3>
+                                    <h3>Expected Enhancements</h3>
 
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
 
-                                <h3>Workflows</h3>
+                                    <h3>Workflow Components</h3>
 
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                            </div>
-                        </mat-tab>
-                        <mat-tab label="Advanced Modifiers">
-                            <div class="tab-modifiers">
-                                <h3>Complexity Considerations</h3>
-                                <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                                <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Advanced Modifiers">
+                                <div class="tab-modifiers">
+                                    <h3>Complexity Considerations</h3>
+                                    <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                    <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
 
-                                <h3 class="override-header">Complexity Override</h3>
-                                <mat-slider aria-label="unit(s)"></mat-slider>
-                            </div>
-                        </mat-tab>
-                    </mat-tab-group>
+                                    <h3 class="override-header">Complexity Override</h3>
+                                    <mat-slider aria-label="unit(s)"></mat-slider>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
 
-                </mat-expansion-panel>
+                    </mat-expansion-panel>
+
+                    <!-- P2P-->
+                    <mat-expansion-panel expanded="false">
+                        <mat-expansion-panel-header class="OCA">
+                            <mat-panel-title>
+                                Procure to Pay
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Expand for Detailed Scoping
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <mat-tab-group mat-align-tabs="center">
+                            <mat-tab label="Overview">
+
+                                <div class="tab-overview">
+
+                                    <h3>Phases in Scope</h3>
+                                    <p>
+                                        <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Vision</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Validate</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Construct</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                    </p>
+
+                                    <h3>Staffing Considerations</h3>
+                                    <p>
+                                        <mat-checkbox>Using KGS</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                    </p>
+
+                                </div>
+                            </mat-tab>
+
+                            <mat-tab label="Details">
+                                <div class="tab-details">
+                                    <h3>Assumptions</h3>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Current Business Units</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Legal Entities</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Report Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Integration Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Conversion Data Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Enhancement Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Workflows</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Advanced Modifiers">
+                                <div class="tab-modifiers">
+                                    <h3>Complexity Considerations</h3>
+                                    <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                    <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                    <h3 class="override-header">Complexity Override</h3>
+                                    <mat-slider aria-label="unit(s)"></mat-slider>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+                    </mat-expansion-panel>
+                    <!-- O2C-->
+                    <mat-expansion-panel expanded="false">
+                        <mat-expansion-panel-header class="OCA">
+                            <mat-panel-title>
+                                Order to Cash
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Expand for Detailed Scoping
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <mat-tab-group mat-align-tabs="center">
+                            <mat-tab label="Overview">
+
+                                <div class="tab-overview">
+
+                                    <h3>Phases in Scope</h3>
+                                    <p>
+                                        <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Vision</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Validate</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Construct</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                    </p>
+
+                                    <h3>Staffing Considerations</h3>
+                                    <p>
+                                        <mat-checkbox>Using KGS</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                    </p>
+
+                                </div>
+                            </mat-tab>
+
+                            <mat-tab label="Details">
+                                <div class="tab-details">
+                                    <h3>Assumptions</h3>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Current Business Units</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Legal Entities</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Report Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Integration Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Conversion Data Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Enhancement Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Workflows</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Advanced Modifiers">
+                                <div class="tab-modifiers">
+                                    <h3>Complexity Considerations</h3>
+                                    <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                    <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                    <h3 class="override-header">Complexity Override</h3>
+                                    <mat-slider aria-label="unit(s)"></mat-slider>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+                    </mat-expansion-panel>
+                    <!-- Plan2P-->
+                    <mat-expansion-panel expanded="false">
+                        <mat-expansion-panel-header class="OCA">
+                            <mat-panel-title>
+                                Plan to Perform
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Expand for Detailed Scoping
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <mat-tab-group mat-align-tabs="center">
+                            <mat-tab label="Overview">
+
+                                <div class="tab-overview">
+
+                                    <h3>Phases in Scope</h3>
+                                    <p>
+                                        <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Vision</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Validate</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Construct</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                    </p>
+
+                                    <h3>Staffing Considerations</h3>
+                                    <p>
+                                        <mat-checkbox>Using KGS</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                    </p>
+
+                                </div>
+                            </mat-tab>
+
+                            <mat-tab label="Details">
+                                <div class="tab-details">
+                                    <h3>Assumptions</h3>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Current Business Units</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Legal Entities</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Report Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Integration Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Conversion Data Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Enhancement Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Workflows</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Advanced Modifiers">
+                                <div class="tab-modifiers">
+                                    <h3>Complexity Considerations</h3>
+                                    <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                    <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                    <h3 class="override-header">Complexity Override</h3>
+                                    <mat-slider aria-label="unit(s)"></mat-slider>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+                    </mat-expansion-panel>
+                    <!-- A2R-->
+                    <mat-expansion-panel expanded="false">
+                        <mat-expansion-panel-header class="OCA">
+                            <mat-panel-title>
+                                Acquire to Retire
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Expand for Detailed Scoping
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <mat-tab-group mat-align-tabs="center">
+                            <mat-tab label="Overview">
+
+                                <div class="tab-overview">
+
+                                    <h3>Phases in Scope</h3>
+                                    <p>
+                                        <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Vision</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Validate</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Construct</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                    </p>
+
+                                    <h3>Staffing Considerations</h3>
+                                    <p>
+                                        <mat-checkbox>Using KGS</mat-checkbox>
+                                    </p>
+                                    <p>
+                                        <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                    </p>
+
+                                </div>
+                            </mat-tab>
+
+                            <mat-tab label="Details">
+                                <div class="tab-details">
+                                    <h3>Assumptions</h3>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Current Business Units</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <mat-form-field>
+                                        <mat-label>Number of Legal Entities</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Report Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Integration Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Conversion Data Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Enhancement Objects</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+
+                                    <h3>Workflows</h3>
+
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Simple</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Normal</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                    <mat-form-field class="fricew-object">
+                                        <mat-label>Complex</mat-label>
+                                        <input matInput type="number" />
+                                    </mat-form-field>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Advanced Modifiers">
+                                <div class="tab-modifiers">
+                                    <h3>Complexity Considerations</h3>
+                                    <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                    <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                    <h3 class="override-header">Complexity Override</h3>
+                                    <mat-slider aria-label="unit(s)"></mat-slider>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+                    </mat-expansion-panel>
+
+                </mat-accordion>
             </div>
-                <!-- Functional Workstreams-->
-                <mat-expansion-panel expanded="false">
-                    <mat-expansion-panel-header class="OCA">
-                        <mat-panel-title>
-                            Record to Report
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Expand for Detailed Scoping
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    <mat-tab-group mat-align-tabs="center">
-                        <mat-tab label="Overview">
-
-                            <div class="tab-overview">
-
-                                <h3>Phases in Scope</h3>
-                                <p>
-                                    <mat-checkbox checked="true">Discovery</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Vision</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Validate</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Construct</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Deploy</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox checked="true">Evolve</mat-checkbox>
-                                </p>
-
-                                <h3>Staffing Considerations</h3>
-                                <p>
-                                    <mat-checkbox>Using KGS</mat-checkbox>
-                                </p>
-                                <p>
-                                    <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
-                                </p>
-
-                            </div>
-                        </mat-tab>
-
-                        <mat-tab label="Details">
-                            <div class="tab-details">
-                                <h3>Assumptions</h3>
-
-                                <mat-form-field>
-                                    <mat-label>Number of Current Business Units</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <mat-form-field>
-                                    <mat-label>Number of Legal Entities</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <h3>Report Objects</h3>
-
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <h3>Integration Objects</h3>
-
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <h3>Conversion Data Objects</h3>
-
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <h3>Enhancement Objects</h3>
-
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-
-                                <h3>Workflows</h3>
-
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Simple</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Normal</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                                <mat-form-field class="fricew-object">
-                                    <mat-label>Complex</mat-label>
-                                    <input matInput type="number" />
-                                </mat-form-field>
-                            </div>
-                        </mat-tab>
-                        <mat-tab label="Advanced Modifiers">
-                            <div class="tab-modifiers">
-                                <h3>Complexity Considerations</h3>
-                                <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                                <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-
-                                <h3 class="override-header">Complexity Override</h3>
-                                <mat-slider aria-label="unit(s)"></mat-slider>
-                            </div>
-                        </mat-tab>
-                    </mat-tab-group>
-
-                </mat-expansion-panel>
-                
-                <!--Vertical stepper start-->
-                <!-- <mat-vertical-stepper #stepper orientation="vertical" class="Financials-Stepper">
-
-            <mat-step>
-              <ng-template matStepLabel>Record to Report</ng-template>
-
-                <mat-tab-group mat-align-tabs="center">
-                  <mat-tab label="Overview">
-                      
-                      <div class="tab-overview">
-      
-                        <h3>Phases in Scope</h3>
-                          <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
-                          <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
-                          <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
-                          <p><mat-checkbox checked="true">Construct</mat-checkbox></p>
-                          <p><mat-checkbox checked="true">Deploy</mat-checkbox></p>
-                          <p><mat-checkbox checked="true">Evolve</mat-checkbox></p>
-      
-                          <h3>Staffing Considerations</h3>
-                          <p><mat-checkbox>Using KGS</mat-checkbox></p>
-                          <p><mat-checkbox>Dedicated Workstream Lead</mat-checkbox></p>
-      
-                      </div>
-                  </mat-tab>
-      
-                  <mat-tab label="Details">
-                      <div class="tab-details">
-                          <h3>Assumptions</h3>
-      
-                          <mat-form-field>
-                              <mat-label>Number of Current Business Units</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <mat-form-field>
-                              <mat-label>Number of Legal Entities</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <h3>Report Objects</h3>
-      
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Simple</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Normal</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Complex</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <h3>Integration Objects</h3>
-      
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Simple</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Normal</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Complex</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <h3>Conversion Data Objects</h3>
-      
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Simple</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Normal</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Complex</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <h3>Enhancement Objects</h3>
-      
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Simple</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Normal</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Complex</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-      
-                          <h3>Workflows</h3>
-      
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Simple</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Normal</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                          <mat-form-field class="fricew-object">
-                              <mat-label>Complex</mat-label>
-                              <input matInput type="number" />
-                          </mat-form-field>
-                      </div>
-                  </mat-tab>
-                  <mat-tab label="Advanced Modifiers">
-                      <div class="tab-modifiers">
-                          <h3>Complexity Considerations</h3>
-                          <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                          <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-      
-                          <h3 class="override-header">Complexity Override</h3>
-                          <mat-slider aria-label="unit(s)"></mat-slider>
-                      </div>
-                  </mat-tab>
-              </mat-tab-group>
-                
-
-
-
-            </mat-step>
-      
-            <mat-step>
-              <ng-template matStepLabel>Procure to Pay</ng-template>
-      
-              <mat-tab-group mat-align-tabs="center">
-                <mat-tab label="Overview">
-                    
-                    <div class="tab-overview">
-      
-                      <h3>Phases in Scope</h3>
-                        <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
-      
-                        <h3>Staffing Considerations</h3>
-                        <p><mat-checkbox>Using KGS</mat-checkbox></p>
-                        <p><mat-checkbox>Dedicated Workstream Lead</mat-checkbox></p>
-      
-                    </div>
-                </mat-tab>
-      
-                <mat-tab label="Details">
-                    <div class="tab-details">
-                        <h3>Assumptions</h3>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Current Business Units</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Legal Entities</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Report Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Integration Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Conversion Data Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Enhancement Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Workflows</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                    </div>
-                </mat-tab>
-                <mat-tab label="Advanced Modifiers">
-                    <div class="tab-modifiers">
-                        <h3>Complexity Considerations</h3>
-                        <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                        <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-      
-                        <h3 class="override-header">Complexity Override</h3>
-                        <mat-slider aria-label="unit(s)"></mat-slider>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
-      
-      
-            </mat-step>
-      
-            <mat-step>
-              <ng-template matStepLabel>Order to Cash</ng-template>
-      
-              <mat-tab-group mat-align-tabs="center">
-                <mat-tab label="Overview">
-                    
-                    <div class="tab-overview">
-      
-                      <h3>Phases in Scope</h3>
-                        <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
-      
-                        <h3>Staffing Considerations</h3>
-                        <p><mat-checkbox>Using KGS</mat-checkbox></p>
-                        <p><mat-checkbox>Dedicated Workstream Lead</mat-checkbox></p>
-      
-                    </div>
-                </mat-tab>
-      
-                <mat-tab label="Details">
-                    <div class="tab-details">
-                        <h3>Assumptions</h3>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Current Business Units</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Legal Entities</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Report Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number"/>
-                        </mat-form-field>
-      
-                        <h3>Integration Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Conversion Data Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Enhancement Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Workflows</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                    </div>
-                </mat-tab>
-                <mat-tab label="Advanced Modifiers">
-                    <div class="tab-modifiers">
-                        <h3>Complexity Considerations</h3>
-                        <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                        <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-      
-                        <h3 class="override-header">Complexity Override</h3>
-                        <mat-slider aria-label="unit(s)"></mat-slider>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
-      
-            </mat-step>
-      
-            <mat-step>
-              <ng-template matStepLabel>Plan to Perform</ng-template>
-              <mat-tab-group mat-align-tabs="center">
-                <mat-tab label="Overview">
-                    
-                    <div class="tab-overview">
-      
-                      <h3>Phases in Scope</h3>
-                        <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
-      
-                        <h3>Staffing Considerations</h3>
-                        <p><mat-checkbox>Using KGS</mat-checkbox></p>
-                        <p><mat-checkbox>Dedicated Workstream Lead</mat-checkbox></p>
-      
-                    </div>
-                </mat-tab>
-      
-                <mat-tab label="Details">
-                    <div class="tab-details">
-                        <h3>Assumptions</h3>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Current Business Units</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Legal Entities</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Report Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Integration Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Conversion Data Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Enhancement Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Workflows</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                    </div>
-                </mat-tab>
-                <mat-tab label="Advanced Modifiers">
-                    <div class="tab-modifiers">
-                        <h3>Complexity Considerations</h3>
-                        <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                        <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-      
-                        <h3 class="override-header">Complexity Override</h3>
-                        <mat-slider aria-label="unit(s)"></mat-slider>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
-      
-            </mat-step>
-      
-            <mat-step>
-              <ng-template matStepLabel>Acquire to Retire</ng-template>
-              <mat-tab-group mat-align-tabs="center">
-                <mat-tab label="Overview">
-                    
-                    <div class="tab-overview">
-      
-                      <h3>Phases in Scope</h3>
-                        <p><mat-checkbox checked="true" >Discovery</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Vision</mat-checkbox></p>
-                        <p><mat-checkbox checked="true">Validate</mat-checkbox></p>
-      
-                        <h3>Staffing Considerations</h3>
-                        <p><mat-checkbox>Using KGS</mat-checkbox></p>
-                        <p><mat-checkbox>Dedicated Workstream Lead</mat-checkbox></p>
-      
-                    </div>
-                </mat-tab>
-      
-                <mat-tab label="Details">
-                    <div class="tab-details">
-                        <h3>Assumptions</h3>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Current Business Units</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <mat-form-field>
-                            <mat-label>Number of Legal Entities</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Report Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Integration Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Conversion Data Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Enhancement Objects</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-      
-                        <h3>Workflows</h3>
-      
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Simple</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Normal</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                        <mat-form-field class="fricew-object">
-                            <mat-label>Complex</mat-label>
-                            <input matInput type="number" />
-                        </mat-form-field>
-                    </div>
-                </mat-tab>
-                <mat-tab label="Advanced Modifiers">
-                    <div class="tab-modifiers">
-                        <h3>Complexity Considerations</h3>
-                        <mat-checkbox>Business Unit Consolidation</mat-checkbox>
-                        <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
-      
-                        <h3 class="override-header">Complexity Override</h3>
-                        <mat-slider aria-label="unit(s)"></mat-slider>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
-            </mat-step>
-      
-            <mat-step>
-              <ng-template matStepLabel>Done</ng-template>
-              <p>You are now done.</p>
-              <div>
-                <button mat-raised-button>Save</button>
-                <button mat-raised-button (click)="stepper.reset()">Reset</button>
-              </div>
-            </mat-step>
-      
-      
-          </mat-vertical-stepper> -->
             </mat-grid-tile>
             <!-- Scoping Tab Readout-->
+
             <mat-grid-tile>
                 <div class="resourcing-table mat-card">
 
@@ -984,6 +805,9 @@
         </mat-grid-list>
 
     </mat-expansion-panel>
+
+
+
     <mat-progress-bar class="Progress-Bar" mode="determinate" value="50" color="warn"></mat-progress-bar>
     <div class="Progress">Progress: 50%</div>
     <h1> Governance </h1>
@@ -993,7 +817,7 @@
                 Governance
             </mat-panel-title>
             <mat-panel-description>
-                Expand for Sectors
+                Expand for Project Governance Scoping Considerations
             </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-vertical-stepper orientation="vertical" class="Governance-Stepper">
@@ -1033,7 +857,7 @@
                 Additional Options
             </mat-panel-title>
             <mat-panel-description>
-                Expand for Options
+                Expand for Additional Scoping Considerations
             </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-vertical-stepper orientation="vertical" class="Additional-Stepper">

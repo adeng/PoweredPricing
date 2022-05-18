@@ -11,18 +11,320 @@
             </mat-panel-title>
             <mat-panel-description>
                 Expand for Workstreams
-              </mat-panel-description>
+            </mat-panel-description>
         </mat-expansion-panel-header>
-        
 
-        <!--Vertical stepper start-->
-        <mat-vertical-stepper #stepper orientation="vertical" class="Financials-Stepper">
+        <!-- Scoping Tabs -->
+        <mat-grid-list cols="2" rowHeight="1:1">
+            <mat-grid-tile>
+                <!-- Functional Workstreams-->
+                <div><mat-expansion-panel expanded="false">
+                    <mat-expansion-panel-header class="OCA">
+                        <mat-panel-title>
+                            Record to Report
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Expand for Detailed Scoping
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <mat-tab-group mat-align-tabs="center">
+                        <mat-tab label="Overview">
+
+                            <div class="tab-overview">
+
+                                <h3>Phases in Scope</h3>
+                                <p>
+                                    <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Vision</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Validate</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Construct</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                </p>
+
+                                <h3>Staffing Considerations</h3>
+                                <p>
+                                    <mat-checkbox>Using KGS</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                </p>
+
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Details">
+                            <div class="tab-details">
+                                <h3>Assumptions</h3>
+
+                                <mat-form-field>
+                                    <mat-label>Number of Current Business Units</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <mat-form-field>
+                                    <mat-label>Number of Legal Entities</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Report Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Integration Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Conversion Data Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Enhancement Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Workflows</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Advanced Modifiers">
+                            <div class="tab-modifiers">
+                                <h3>Complexity Considerations</h3>
+                                <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                <h3 class="override-header">Complexity Override</h3>
+                                <mat-slider aria-label="unit(s)"></mat-slider>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+
+                </mat-expansion-panel>
+            </div>
+                <!-- Functional Workstreams-->
+                <mat-expansion-panel expanded="false">
+                    <mat-expansion-panel-header class="OCA">
+                        <mat-panel-title>
+                            Record to Report
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Expand for Detailed Scoping
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <mat-tab-group mat-align-tabs="center">
+                        <mat-tab label="Overview">
+
+                            <div class="tab-overview">
+
+                                <h3>Phases in Scope</h3>
+                                <p>
+                                    <mat-checkbox checked="true">Discovery</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Vision</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Validate</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Construct</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Deploy</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox checked="true">Evolve</mat-checkbox>
+                                </p>
+
+                                <h3>Staffing Considerations</h3>
+                                <p>
+                                    <mat-checkbox>Using KGS</mat-checkbox>
+                                </p>
+                                <p>
+                                    <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                                </p>
+
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Details">
+                            <div class="tab-details">
+                                <h3>Assumptions</h3>
+
+                                <mat-form-field>
+                                    <mat-label>Number of Current Business Units</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <mat-form-field>
+                                    <mat-label>Number of Legal Entities</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Report Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Integration Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Conversion Data Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Enhancement Objects</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+
+                                <h3>Workflows</h3>
+
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Simple</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Normal</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                                <mat-form-field class="fricew-object">
+                                    <mat-label>Complex</mat-label>
+                                    <input matInput type="number" />
+                                </mat-form-field>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Advanced Modifiers">
+                            <div class="tab-modifiers">
+                                <h3>Complexity Considerations</h3>
+                                <mat-checkbox>Business Unit Consolidation</mat-checkbox>
+                                <mat-checkbox>Chart of Accounts Redesign</mat-checkbox>
+
+                                <h3 class="override-header">Complexity Override</h3>
+                                <mat-slider aria-label="unit(s)"></mat-slider>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+
+                </mat-expansion-panel>
+                
+                <!--Vertical stepper start-->
+                <!-- <mat-vertical-stepper #stepper orientation="vertical" class="Financials-Stepper">
 
             <mat-step>
               <ng-template matStepLabel>Record to Report</ng-template>
-              <!-- Scoping Tabs -->
-                  <mat-grid-list cols="2" rowHeight="1:1">
-                <mat-grid-tile>
+
                 <mat-tab-group mat-align-tabs="center">
                   <mat-tab label="Overview">
                       
@@ -145,31 +447,8 @@
                   </mat-tab>
               </mat-tab-group>
                 
-            </mat-grid-tile>
-            <!-- Scoping Tab Readout-->
-            <mat-grid-tile>
-                <div class="resourcing-table mat-card">
-               
-                    <table mat-table #table [dataSource]="RESOURCING_DATA">
-                    
-                        <ng-container *ngFor="let column of columns" [matColumnDef]="column">
-                            <th mat-header-cell *matHeaderCellDef>{{displayColumns[column]}}</th>
-            
-                            <td mat-cell *matCellDef="let resource" [ngSwitch]="column"> 
-                               
-                                <p *ngSwitchCase="'fte'">{{resource.active ? resource.fte : 0}}</p>
-                                <p *ngSwitchCase="'estimated_hours'">{{resource.fte * HOURS_CONSTANT}}</p>
-                                <p *ngSwitchCase="'allocation'">{{calculateAllocation(resource) | percent}}</p>
-                                <p *ngSwitchDefault>{{resource[column]}}</p>
-                            </td>
-                        </ng-container>
-            
-                        <tr mat-header-row *matHeaderRowDef="columns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
-                    </table>
-                </div>
-            </mat-grid-tile>
-            </mat-grid-list>
+
+
 
             </mat-step>
       
@@ -677,7 +956,32 @@
             </mat-step>
       
       
-          </mat-vertical-stepper>
+          </mat-vertical-stepper> -->
+            </mat-grid-tile>
+            <!-- Scoping Tab Readout-->
+            <mat-grid-tile>
+                <div class="resourcing-table mat-card">
+
+                    <table mat-table #table [dataSource]="RESOURCING_DATA">
+
+                        <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+                            <th mat-header-cell *matHeaderCellDef>{{displayColumns[column]}}</th>
+
+                            <td mat-cell *matCellDef="let resource" [ngSwitch]="column">
+
+                                <p *ngSwitchCase="'fte'">{{resource.active ? resource.fte : 0}}</p>
+                                <p *ngSwitchCase="'estimated_hours'">{{resource.fte * HOURS_CONSTANT}}</p>
+                                <p *ngSwitchCase="'allocation'">{{calculateAllocation(resource) | percent}}</p>
+                                <p *ngSwitchDefault>{{resource[column]}}</p>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+                    </table>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
 
     </mat-expansion-panel>
     <mat-progress-bar class="Progress-Bar" mode="determinate" value="50" color="warn"></mat-progress-bar>
@@ -690,37 +994,37 @@
             </mat-panel-title>
             <mat-panel-description>
                 Expand for Sectors
-              </mat-panel-description>
+            </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-vertical-stepper orientation="vertical" class="Governance-Stepper">
             <mat-step>
-              <ng-template matStepLabel>Project Management</ng-template>
-              <ng-template matStepContent>
-                <p>This content was rendered lazily</p>
-                <button mat-button matStepperNext>Next</button>
-              </ng-template>
+                <ng-template matStepLabel>Project Management</ng-template>
+                <ng-template matStepContent>
+                    <p>This content was rendered lazily</p>
+                    <button mat-button matStepperNext>Next</button>
+                </ng-template>
             </mat-step>
             <mat-step>
-              <ng-template matStepLabel>Change Management</ng-template>
-              <ng-template matStepContent>
-                <p>This content was also rendered lazily</p>
+                <ng-template matStepLabel>Change Management</ng-template>
+                <ng-template matStepContent>
+                    <p>This content was also rendered lazily</p>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Security and Controls</ng-template>
+                <p>This content was rendered eagerly</p>
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </ng-template>
             </mat-step>
             <mat-step>
-              <ng-template matStepLabel>Security and Controls</ng-template>
-              <p>This content was rendered eagerly</p>
-              <button mat-button matStepperPrevious>Back</button>
+                <ng-template matStepLabel>Tax</ng-template>
+                <ng-template matStepContent>
+                    <p>This content was rendered lazily</p>
+                    <button mat-button matStepperNext>Next</button>
+                </ng-template>
             </mat-step>
-            <mat-step>
-              <ng-template matStepLabel>Tax</ng-template>
-              <ng-template matStepContent>
-                <p>This content was rendered lazily</p>
-                <button mat-button matStepperNext>Next</button>
-              </ng-template>
-            </mat-step>
-          </mat-vertical-stepper>
+        </mat-vertical-stepper>
     </mat-expansion-panel>
     <h1> Additional Options </h1>
     <mat-expansion-panel expanded="false">
@@ -730,29 +1034,29 @@
             </mat-panel-title>
             <mat-panel-description>
                 Expand for Options
-              </mat-panel-description>
+            </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-vertical-stepper orientation="vertical" class="Additional-Stepper">
             <mat-step>
-              <ng-template matStepLabel>Step 1</ng-template>
-              <ng-template matStepContent>
-                <p>This content was rendered lazily</p>
-                <button mat-button matStepperNext>Next</button>
-              </ng-template>
+                <ng-template matStepLabel>Step 1</ng-template>
+                <ng-template matStepContent>
+                    <p>This content was rendered lazily</p>
+                    <button mat-button matStepperNext>Next</button>
+                </ng-template>
             </mat-step>
             <mat-step>
-              <ng-template matStepLabel>Step 2</ng-template>
-              <ng-template matStepContent>
-                <p>This content was also rendered lazily</p>
+                <ng-template matStepLabel>Step 2</ng-template>
+                <ng-template matStepContent>
+                    <p>This content was also rendered lazily</p>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Step 3</ng-template>
+                <p>This content was rendered eagerly</p>
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </ng-template>
             </mat-step>
-            <mat-step>
-              <ng-template matStepLabel>Step 3</ng-template>
-              <p>This content was rendered eagerly</p>
-              <button mat-button matStepperPrevious>Back</button>
-            </mat-step>
-          </mat-vertical-stepper>
+        </mat-vertical-stepper>
     </mat-expansion-panel>
 </div>

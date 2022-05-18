@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { PricingPageComponent } from './pages/project/pricing-page/pricing-page.component';
 import { ResourcingPageComponent } from './pages/project/resourcing-page/resourcing-page.component';
+import { ScopingPage3Component } from './pages/project/scoping-page-3/scoping-page-3.component';
 import { ScopingPageComponent } from './pages/project/scoping-page/scoping-page.component';
 import { ScopingPagev2Component } from './pages/project/scoping-pagev2/scoping-pagev2.component';
 import { SummaryPageComponent } from './pages/project/summary-page/summary-page.component';
@@ -18,7 +19,7 @@ const routes: Routes = [
 	},
 	{
 		path: 'project/scoping',
-		component: ScopingPageComponent
+		component: ScopingPage3Component
 	},
 	{
 		path: 'project/resourcing',

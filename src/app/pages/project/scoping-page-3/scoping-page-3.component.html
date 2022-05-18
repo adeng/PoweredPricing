@@ -1,0 +1,86 @@
+<div class="container">
+    <mat-grid-list cols="12" rowHeight="50px" id="main-grid">
+
+        <mat-grid-tile rowspan="3" colspan="3">
+            <mat-card class="module-select">
+                <mat-form-field>
+                    <mat-label>Module</mat-label>
+                    <mat-select>
+                        <mat-option>Record to Report</mat-option>
+                        <mat-option>Procure to Pay</mat-option>
+                        <mat-option>Acquire to Retire</mat-option>
+                        <mat-option>Order to Cash</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile rowspan="3" colspan="4">
+            <mat-card class="kpis">
+                <div class="kpi-container">
+                    <div class="kpi">
+                        <h2>470</h2>
+                        <p>Hours</p>
+                    </div>
+                    <div class="kpi kpi-2">
+                        <h2>$200,000</h2>
+                        <p>Total Cost</p>
+                    </div>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile rowspan="15" colspan="5">
+            <mat-card class="table-pane">
+                <table mat-table #table [dataSource]="RESOURCING_DATA">
+
+                    <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+                        <th mat-header-cell *matHeaderCellDef>{{displayColumns[column]}}</th>
+
+                        <td mat-cell *matCellDef="let resource" [ngSwitch]="column">
+                            <p *ngSwitchCase="'fte'">{{resource.active ? resource.fte : 0}}</p>
+                            <p *ngSwitchCase="'estimated_hours'">{{resource.fte * HOURS_CONSTANT}}</p>
+                            <p *ngSwitchCase="'allocation'">{{calculateAllocation(resource) | percent}}</p>
+                            <p *ngSwitchDefault>{{resource[column]}}</p>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+                </table>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="7" rowspan="12">
+            <mat-card class="section-pane">
+                <mat-tab-group mat-align-tabs="center">
+                    <mat-tab label="Overview">
+                        <div class="tab-overview">
+                            <h3>Phases in Scope</h3>
+                            <mat-checkbox checked="true">Discovery</mat-checkbox>
+                            <mat-checkbox checked="true">Vision</mat-checkbox>
+                            <mat-checkbox checked="true">Validate</mat-checkbox>
+
+                            <h3>Staffing Considerations</h3>
+                            <mat-checkbox>Using KGS</mat-checkbox>
+                            <mat-checkbox>Dedicated Workstream Lead</mat-checkbox>
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Details">
+                        <div class="tab-details">
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Advanced Modifiers">
+                        <div class="tab-modifiers">
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+        </mat-grid-tile>
+
+
+        <!-- Scoping Tab Readout-->
+    </mat-grid-list>
+
+</div>

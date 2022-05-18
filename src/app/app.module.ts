@@ -13,10 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 // Import this page's components
 import { SummaryPageComponentModule } from './pages/project/summary-page/summary-page.module';
@@ -26,6 +26,7 @@ import { PricingPageComponentModule } from './pages/project/pricing-page/pricing
 import { ScopingPagev2ComponentModule } from './pages/project/scoping-pagev2/scoping-pagev2.module';
 import { MatProgressBarModule, MatSnackBarModule } from '@angular/material';
 import { HomePageComponent } from './pages/home/home-page/home-page.component';
+import { ScopingPage3ComponentModule } from './pages/project/scoping-page-3/scoping-page-3.module';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { HomePageComponent } from './pages/home/home-page/home-page.component';
     ResourcingPageComponentModule,
     ScopingPageComponentModule,
     ScopingPagev2ComponentModule,
+    ScopingPage3ComponentModule,
     PricingPageComponentModule,
     MatProgressBarModule,
     MatSnackBarModule,
